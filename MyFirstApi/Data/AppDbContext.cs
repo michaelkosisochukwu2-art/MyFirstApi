@@ -23,8 +23,8 @@ namespace MyFirstApi.Data
                 .HasOne(e => e.Department)
                 .WithMany(d => d.Employees)
                 .HasForeignKey(e => e.DepartmentId)
-                //.OnDelete(DeleteBehavior.SetNull);
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
+            //.OnDelete(DeleteBehavior.Restrict);
         }
     }
 
